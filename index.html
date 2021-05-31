@@ -1,16 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="./public/">
+    <!-- <base href=""> -->
     <!-- styles -->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>AlamSirji v3.0</title>
 </head>
+
 <body>
-    <h1>Building Life v3.0 in Progress <span id="spinner"></span></h1>
+
+    <h1>Building Life v3.0 in Progress</h1>
     <p>Life keeps changing so do I .....</p>
+    <div class="mainContainer">
+        <div class="timerContainer">
+            <div class="digitInfo">
+                <div id="days">00</div>
+                <span>days</span>
+                <span id="spinner"></span>
+            </div>
+            <div class="digitInfo">
+                <div id="hours">00</div>
+                <span>hours</span>
+                <span id="spinner"></span>
+            </div>
+            <div class="digitInfo">
+                <div id="minutes">00</div>
+                <span>minutes</span>
+                <span id="spinner"></span>
+            </div>
+            <div class="digitInfo">
+                <div id="seconds">00</div>
+                <span>seconds</span>
+                <span id="spinner"></span>
+            </div>
+        </div>
+        <div class="timerContainer">
+            <div id="ms" class="digitInfo">00</div>
+        </div>
+    </div>
+
 </body>
+
 </html>

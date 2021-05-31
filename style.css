@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(296deg, #fa1302 50%, transparent 13%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1,
+p {
+    font-family: 'Odibee Sans', cursive;
+}
+
+#spinner {
+    border-top: 10px solid black;
+    border-left: 10px solid red;
+    border-right: 10px solid red;
+    border-bottom: 10px solid red;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+    background-color: white;
+    animation: spin 0.01s infinite;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.timerContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.digitInfo {
+    padding: 10px;
+    font-size: 40px;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.digitInfo span {
+    font-size: 15px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
