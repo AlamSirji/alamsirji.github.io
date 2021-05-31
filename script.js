@@ -1,5 +1,5 @@
-const aimDate = new Date("07/05/2024");
-
+const aimDate = new Date("06/01/2021");
+console.log(aimDate);
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
@@ -8,6 +8,8 @@ const msEl = document.getElementById("ms");
 
 // Initial Printing of Date
 printDate();
+
+// Permanent Printing
 setInterval(printDate, 1);
 
 function printDate() {
@@ -16,9 +18,13 @@ function printDate() {
     let hours = Math.floor(diff / (1000 * 60 * 60) % 24);
     let minutes = Math.floor(diff / (1000 * 60) % 60);
     let seconds = Math.floor(diff / (1000) % 60);
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = hours;
-    minutesEl.innerHTML = minutes;
-    secondsEl.innerHTML = seconds;
-    msEl.innerHTML = diff;
+    daysEl.innerHTML = format(days);
+    hoursEl.innerHTML = format(hours);
+    minutesEl.innerHTML = format(minutes);
+    secondsEl.innerHTML = format(seconds);
+    msEl.innerHTML = format(diff);
+}
+
+function format(text) {
+    return (text >= 10) ? text : `0${text}`;
 }
