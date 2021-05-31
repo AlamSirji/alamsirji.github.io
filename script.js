@@ -1,4 +1,4 @@
-const aimDate = new Date("06/01/2021");
+const aimDate = new Date("05/07/2024");
 console.log(aimDate);
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
