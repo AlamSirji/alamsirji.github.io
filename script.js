@@ -1,5 +1,4 @@
 const aimDate = new Date("05/07/2024");
-console.log(aimDate);
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
 const minutesEl = document.getElementById("minutes");
