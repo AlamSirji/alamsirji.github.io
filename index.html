@@ -1,24 +1,135 @@
 <!DOCTYPE html>
-<html lang="en" data-beasties-container>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Ionic App Prod</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introverted Portfolio</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f7f6;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
 
-    <base href="./">
+      .container {
+        text-align: center;
+        max-width: 800px;
+        margin: 20px;
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
 
-    <meta name="color-scheme" content="light dark">
-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="msapplication-tap-highlight" content="no">
+      h1 {
+        font-size: 36px;
+        color: #4f4f4f;
+      }
 
-    <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+      .intro {
+        font-size: 18px;
+        color: #777;
+        margin-top: 10px;
+      }
 
-    <!-- add to homescreen for ios -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <style>:root{--ion-color-primary:#0054e9;--ion-color-primary-rgb:0, 84, 233;--ion-color-primary-contrast:#fff;--ion-color-primary-contrast-rgb:255, 255, 255;--ion-color-primary-shade:#004acd;--ion-color-primary-tint:#1a65eb;--ion-color-secondary:#0163aa;--ion-color-secondary-rgb:1, 99, 170;--ion-color-secondary-contrast:#fff;--ion-color-secondary-contrast-rgb:255, 255, 255;--ion-color-secondary-shade:#015796;--ion-color-secondary-tint:#1a73b3;--ion-color-tertiary:#6030ff;--ion-color-tertiary-rgb:96, 48, 255;--ion-color-tertiary-contrast:#fff;--ion-color-tertiary-contrast-rgb:255, 255, 255;--ion-color-tertiary-shade:#542ae0;--ion-color-tertiary-tint:#7045ff;--ion-color-success:#2dd55b;--ion-color-success-rgb:45, 213, 91;--ion-color-success-contrast:#000;--ion-color-success-contrast-rgb:0, 0, 0;--ion-color-success-shade:#28bb50;--ion-color-success-tint:#42d96b;--ion-color-warning:#ffc409;--ion-color-warning-rgb:255, 196, 9;--ion-color-warning-contrast:#000;--ion-color-warning-contrast-rgb:0, 0, 0;--ion-color-warning-shade:#e0ac08;--ion-color-warning-tint:#ffca22;--ion-color-danger:#c5000f;--ion-color-danger-rgb:197, 0, 15;--ion-color-danger-contrast:#fff;--ion-color-danger-contrast-rgb:255, 255, 255;--ion-color-danger-shade:#ad000d;--ion-color-danger-tint:#cb1a27;--ion-color-light:#f4f5f8;--ion-color-light-rgb:244, 245, 248;--ion-color-light-contrast:#000;--ion-color-light-contrast-rgb:0, 0, 0;--ion-color-light-shade:#d7d8da;--ion-color-light-tint:#f5f6f9;--ion-color-medium:#636469;--ion-color-medium-rgb:99, 100, 105;--ion-color-medium-contrast:#fff;--ion-color-medium-contrast-rgb:255, 255, 255;--ion-color-medium-shade:#57585c;--ion-color-medium-tint:#737478;--ion-color-dark:#222428;--ion-color-dark-rgb:34, 36, 40;--ion-color-dark-contrast:#fff;--ion-color-dark-contrast-rgb:255, 255, 255;--ion-color-dark-shade:#1e2023;--ion-color-dark-tint:#383a3e}html{--ion-dynamic-font:-apple-system-body;--ion-font-family:var(--ion-default-font)}body{background:var(--ion-background-color);color:var(--ion-text-color)}@supports (padding-top: 20px){html{--ion-safe-area-top:var(--ion-statusbar-padding)}}@supports (padding-top: env(safe-area-inset-top)){html{--ion-safe-area-top:env(safe-area-inset-top);--ion-safe-area-bottom:env(safe-area-inset-bottom);--ion-safe-area-left:env(safe-area-inset-left);--ion-safe-area-right:env(safe-area-inset-right)}}*{box-sizing:border-box;-webkit-tap-highlight-color:rgba(0,0,0,0);-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}html{width:100%;height:100%;-webkit-text-size-adjust:100%;text-size-adjust:100%}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;margin:0;padding:0;position:fixed;width:100%;max-width:100%;height:100%;max-height:100%;transform:translateZ(0);text-rendering:optimizeLegibility;overflow:hidden;touch-action:manipulation;-webkit-user-drag:none;-ms-content-zooming:none;word-wrap:break-word;overscroll-behavior-y:none;-webkit-text-size-adjust:none;text-size-adjust:none}html{font-family:var(--ion-font-family)}@supports (-webkit-touch-callout: none){html{font:var(--ion-dynamic-font, 16px var(--ion-font-family))}}</style><link rel="stylesheet" href="styles.9e50c9ef15ce0e4d.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.9e50c9ef15ce0e4d.css"></noscript></head>
+      .about-text {
+        font-size: 20px;
+        color: #555;
+      }
 
+      .quote {
+        margin-top: 30px;
+        font-style: italic;
+        font-size: 18px;
+        color: #888;
+      }
+
+      footer {
+        margin-top: 50px;
+      }
+
+      button {
+        background-color: #6c7ae0;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      button:hover {
+        background-color: #565dcf;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul li {
+        margin: 10px 0;
+      }
+
+      ul li a {
+        text-decoration: none;
+        color: #6c7ae0;
+        font-size: 18px;
+      }
+    </style>
+  </head>
   <body>
-    <app-root></app-root>
-  <script src="runtime.4c5536757fa29494.js" type="module"></script><script src="polyfills.91aae63ddd436914.js" type="module"></script><script src="main.1681c2be704bbd53.js" type="module"></script></body>
+    <div class="container">
+      <header>
+        <h1>Welcome to My World</h1>
+        <p class="intro">A space where simplicity speaks louder than words.</p>
+      </header>
+
+      <section class="about">
+        <h2>About Me</h2>
+        <p class="about-text">
+          I am someone who enjoys quiet moments, reflection, and deeply
+          connecting with the work I do. Here, I share my creations, thoughts,
+          and ideas.
+        </p>
+      </section>
+
+      <section class="quote">
+        <p>"In a world that is loud, I choose to listen to my thoughts."</p>
+      </section>
+
+      <footer>
+        <button id="revealBtn">Reveal My Work</button>
+        <div id="workContent" class="hidden">
+          <h3>Some of My Projects</h3>
+          <ul>
+            <li><a href="#">Project 1</a></li>
+            <li><a href="#">Project 2</a></li>
+            <li><a href="#">Project 3</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document
+        .getElementById("revealBtn")
+        .addEventListener("click", function () {
+          const workContent = document.getElementById("workContent");
+          workContent.classList.toggle("hidden");
+        });
+    </script>
+  </body>
 </html>
